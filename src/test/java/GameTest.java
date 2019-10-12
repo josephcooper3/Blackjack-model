@@ -8,12 +8,15 @@ public class GameTest {
     Game game;
     Player dealer;
     Player player1;
+    Deck deck;
 
     @Before
     public void before(){
         dealer = new Player("Dealer");
         player1 = new Player("Player 1");
-        game = new Game();
+        deck = new Deck();
+        deck.addAllCards();
+        game = new Game(deck);
     }
 
     @Test

@@ -2,10 +2,12 @@ import java.util.ArrayList;
 
 public class Game {
 
+    private Deck deck;
     private Player dealer;
     private ArrayList<Player> players;
 
-    public Game(){
+    public Game(Deck deck){
+        this.deck = deck;
         this.players = new ArrayList<Player>();
     }
 
