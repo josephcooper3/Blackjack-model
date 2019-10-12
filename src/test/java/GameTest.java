@@ -30,4 +30,21 @@ public class GameTest {
         assertEquals(1, game.getPlayerCount());
     }
 
+    @Test
+    public void canGetValue(){
+        game.addValue(RankType.TEN, 10);
+        int value = game.getValue(RankType.TEN);
+        assertEquals(10, value);
+    }
+
+//    @Test
+//    public void gameCanCheckScore(){
+//        Card tenOfClubs = new Card(SuitType.CLUBS, RankType.TEN);
+//        deck.addCard(tenOfClubs);
+//        player1.drawCard(deck);
+//        game.addPlayer(player1);
+//        int score = game.checkScore(player1);
+//        assertEquals(10, score);
+//    }
+
 }

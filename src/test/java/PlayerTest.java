@@ -12,8 +12,6 @@ public class PlayerTest {
     public void before(){
         player1 = new Player("Gert");
         deck = new Deck();
-        deck.addAllCards();
-        deck.shuffle();
     }
 
     @Test
@@ -28,8 +26,17 @@ public class PlayerTest {
 
     @Test
     public void canDrawCard(){
+        deck.addAllCards();
         player1.drawCard(deck);
         assertEquals(1, player1.countHand());
+    }
+
+    @Test
+    public void canGetHand(){
+        Card tenOfClubs = new Card(SuitType.CLUBS, RankType.TEN);
+        deck.addCard(tenOfClubs);
+        player1.drawCard(deck);
+        assertEquals(true, player1.getHand().contains(tenOfClubs));
     }
 
 }

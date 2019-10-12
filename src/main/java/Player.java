@@ -22,4 +22,8 @@ public class Player {
         Card drawnCard = deck.dealCard();
         this.hand.add(drawnCard);
     }
+
+    public ArrayList<Card> getHand() {
+        return this.hand;
+    }
 }
