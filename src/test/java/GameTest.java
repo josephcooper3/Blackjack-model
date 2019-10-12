@@ -21,4 +21,15 @@ public class GameTest {
         assertEquals(0, game.getPlayerCount());
     }
 
+    @Test
+    public void startsWithNoDealer(){
+        assertEquals(null, game.getDealer());
+    }
+
+    @Test
+    public void canAddDealer(){
+        game.addDealer(dealer);
+        assertEquals(dealer, game.getDealer());
+    }
+
 }
