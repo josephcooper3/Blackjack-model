@@ -6,21 +6,14 @@ public class Game {
     private Player dealer;
     private ArrayList<Player> players;
 
-    public Game(Deck deck){
+    public Game(Deck deck, Player dealer){
         this.deck = deck;
+        this.dealer = dealer;
         this.players = new ArrayList<Player>();
     }
 
     public int getPlayerCount() {
         return this.players.size();
-    }
-
-    public void addDealer(Player dealer) {
-        this.dealer = dealer;
-    }
-
-    public Player getDealer() {
-        return this.dealer;
     }
 
     public void addPlayer(Player player) {

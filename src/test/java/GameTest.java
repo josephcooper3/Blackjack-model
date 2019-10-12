@@ -16,7 +16,7 @@ public class GameTest {
         player1 = new Player("Player 1");
         deck = new Deck();
         deck.addAllCards();
-        game = new Game(deck);
+        game = new Game(deck, dealer);
     }
 
     @Test
@@ -25,20 +25,9 @@ public class GameTest {
     }
 
     @Test
-    public void startsWithNoDealer(){
-        assertEquals(null, game.getDealer());
-    }
-
-    @Test
     public void canAddPlayer(){
         game.addPlayer(player1);
         assertEquals(1, game.getPlayerCount());
-    }
-
-    @Test
-    public void canAddDealer(){
-        game.addDealer(dealer);
-        assertEquals(dealer, game.getDealer());
     }
 
 }
