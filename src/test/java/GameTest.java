@@ -27,6 +27,12 @@ public class GameTest {
     }
 
     @Test
+    public void canAddPlayer(){
+        game.addPlayer(player1);
+        assertEquals(1, game.getPlayerCount());
+    }
+
+    @Test
     public void canAddDealer(){
         game.addDealer(dealer);
         assertEquals(dealer, game.getDealer());

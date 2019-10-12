@@ -20,4 +20,8 @@ public class Game {
     public Player getDealer() {
         return this.dealer;
     }
+
+    public void addPlayer(Player player) {
+        this.players.add(player);
+    }
 }
