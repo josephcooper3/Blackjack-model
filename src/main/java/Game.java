@@ -46,4 +46,16 @@ public class Game {
     public Integer getValue(RankType rank) {
         return this.values.get(rank);
     }
+
+    public int getScore(Player player) {
+        ArrayList<Card> hand = player.getHand();
+        Integer handScore = 0;
+        for (Card card:
+             hand) {
+            RankType rank = card.getRank();
+            Integer cardScore = this.getValue(rank);
+            handScore += cardScore;
+        }
+        return handScore;
+    }
 }

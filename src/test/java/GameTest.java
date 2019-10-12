@@ -15,7 +15,6 @@ public class GameTest {
         dealer = new Player("Dealer");
         player1 = new Player("Player 1");
         deck = new Deck();
-        deck.addAllCards();
         game = new Game(deck, dealer);
     }
 
@@ -37,14 +36,15 @@ public class GameTest {
         assertEquals(10, value);
     }
 
-//    @Test
-//    public void gameCanCheckScore(){
-//        Card tenOfClubs = new Card(SuitType.CLUBS, RankType.TEN);
-//        deck.addCard(tenOfClubs);
-//        player1.drawCard(deck);
-//        game.addPlayer(player1);
-//        int score = game.checkScore(player1);
-//        assertEquals(10, score);
-//    }
+    @Test
+    public void gameCanGetScore(){
+        Card tenOfClubs = new Card(SuitType.CLUBS, RankType.TEN);
+        deck.addCard(tenOfClubs);
+        player1.drawCard(deck);
+        game.addPlayer(player1);
+        game.addBlackjackValues();
+        int score = game.getScore(player1);
+        assertEquals(10, score);
+    }
 
 }
