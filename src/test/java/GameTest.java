@@ -47,4 +47,23 @@ public class GameTest {
         assertEquals(10, score);
     }
 
+    @Test
+    public void canGetHighestScorer(){
+        game.addPlayer(player1);
+        game.addBlackjackValues();
+        deck.addAllCards();
+        dealer.drawCard(deck);
+        // Only dealer has drawn a card so will always have highest score
+        assertEquals(dealer, game.getHighestScorer(dealer, player1));
+    }
+
+//    @Test
+//    public void canRunGame(){
+//        game.addPlayer(player1);
+//        game.addBlackjackValues();
+//        String result = game.runGame();
+////      Have not run deck.shuffle(), so dealer will draw the ace and win
+//        assertEquals(result, "Dealer has won the game!");
+//    }
+
 }

@@ -58,4 +58,23 @@ public class Game {
         }
         return handScore;
     }
+
+    public Player getHighestScorer(Player firstPlayer, Player secondPlayer) {
+        return this.getScore(firstPlayer) > this.getScore(secondPlayer) ? firstPlayer : secondPlayer;
+    }
+
+//    public String runGame() {
+//        dealer.drawCard(this.deck);
+//        dealer.drawCard(this.deck);
+//        Player highestScoringPlayer = this.players.get(0);
+//        for (Player player:
+//             this.players) {
+//            player.drawCard(this.deck);
+//            player.drawCard(this.deck);
+//            if (this.getScore(player) > this.getScore(highestScoringPlayer)){
+//                highestScoringPlayer = player;
+//            }
+//        }
+//        Player winner =
+//    }
 }
