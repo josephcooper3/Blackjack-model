@@ -67,4 +67,15 @@ public class GameTest {
         assertEquals(result, "Dealer has won the game!");
     }
 
+    @Test
+    public void canRunGameWithTwoPlayers(){
+        game.addPlayer(player1);
+        Player player2 = new Player("Player 2");
+        game.addPlayer(player2);
+        game.addBlackjackValues();
+        deck.addAllCards();
+        String result = game.runGame();
+        assertEquals(result, "Dealer has won the game!");
+    }
+
 }
