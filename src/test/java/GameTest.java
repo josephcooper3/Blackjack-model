@@ -78,4 +78,13 @@ public class GameTest {
         assertEquals(result, "Dealer has won the game!");
     }
 
+    @Test
+    public void dealerCanLose(){
+        game.addPlayer(player1);
+        game.addBlackjackValues();
+        deck.addAllCards();
+        deck.dealCard(); // Will remove the ace so Player 1 now has higher value hand
+        String result = game.runGame();
+        assertEquals(result, "Player 1 has won the game!");
+    }
 }
