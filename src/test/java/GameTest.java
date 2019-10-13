@@ -57,13 +57,14 @@ public class GameTest {
         assertEquals(dealer, game.getHighestScorer(dealer, player1));
     }
 
-//    @Test
-//    public void canRunGame(){
-//        game.addPlayer(player1);
-//        game.addBlackjackValues();
-//        String result = game.runGame();
-////      Have not run deck.shuffle(), so dealer will draw the ace and win
-//        assertEquals(result, "Dealer has won the game!");
-//    }
+    @Test
+    public void canRunGame(){
+        game.addPlayer(player1);
+        game.addBlackjackValues();
+        deck.addAllCards();
+        String result = game.runGame();
+        // Have not run deck.shuffle(), so dealer will draw the ace and win
+        assertEquals(result, "Dealer has won the game!");
+    }
 
 }
